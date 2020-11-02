@@ -1,0 +1,95 @@
+<Window
+    x:Class="Progkorny.DolgozoDetailsWindow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:assets="clr-namespace:Progkorny.Assets"
+    xmlns:conv="using:Progkorny.Assets"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="AvaloniaAppTemplate"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    Content="{Binding SelectedDolgozo}"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <assets:SzulDateConverter x:Key="Szuletesidatumconverter" />
+    </Window.Resources>
+
+    <Window.ContentTemplate>
+        <DataTemplate>
+            <Border
+                Margin="5"
+                Padding="5"
+                Background="Beige"
+                BorderBrush="Aqua"
+                BorderThickness="2">
+                <Grid ColumnDefinitions="*,2*" RowDefinitions="*,*,*,*,*">
+                    <TextBlock
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="Név:" />
+                    <TextBlock
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="{Binding Nev}" />
+                    <GridSplitter
+                        Grid.Row="1"
+                        Grid.ColumnSpan="2"
+                        Height="5"
+                        VerticalAlignment="Stretch" />
+                    <TextBlock
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="Születási dátum:" />
+                    <TextBlock
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="{Binding SzuletesiDatum, Converter={StaticResource Szuletesidatumconverter}}" />
+                    <TextBlock
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Text="Személyi szám:" />
+                    <TextBlock
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        Text="{Binding SzemelyiSzam}" />
+                    <TextBlock
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        Text="Fizetés:" />
+                    <TextBlock
+                        Grid.Row="4"
+                        Grid.Column="1"
+                        Text="{Binding Fizetes}" />
+                </Grid>
+            </Border>
+        </DataTemplate>
+    </Window.ContentTemplate>
+</Window>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

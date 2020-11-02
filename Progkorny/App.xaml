@@ -1,0 +1,15 @@
+<Application
+    x:Class="Progkorny.App"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:drawing="clr-namespace:System.Drawing;assembly=System.Drawing.Common"
+    xmlns:local="clr-namespace:Progkorny">
+    <Application.DataTemplates>
+        <local:ViewLocator />
+    </Application.DataTemplates>
+
+    <Application.Styles>
+        <StyleInclude Source="avares://Avalonia.Themes.Default/DefaultTheme.xaml" />
+        <StyleInclude Source="avares://Avalonia.Themes.Default/Accents/BaseLight.xaml" />
+    </Application.Styles>
+</Application>
